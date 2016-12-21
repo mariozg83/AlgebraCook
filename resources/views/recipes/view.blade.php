@@ -25,6 +25,7 @@
 						<p>{{ $recipe->description}}</p>
 					</article>
 				</div>
+				
 			</div>
 		</div>
 	</div>

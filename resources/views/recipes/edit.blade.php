@@ -41,25 +41,25 @@
 <script>
 	$(function() 
 	{
-		var scntDiv = $('#ing-coll-fields');
-		var i = $('ing-coll-fields div').size() + 1;
-		
-		$('#addLnk').click(function() {
-			$('<div class="form-group">' + 
-				'<label for="ingredient">Sastojak: <input name="ingredient[]" type="text"/> </label>' +
-				'<a href="#" class="remScnt">' + 
-				'<i class="fa fa-btn fa-close"></i> Remove' +
-				'</a></div>').appendTo(scntDiv);
-				i++
-				return false;
-		});
-		scntDiv.on('click', 'remScnt', function(){
-			if(i>2) {
-				$(this).parents('div.form-group').remove();ž
-				i--;
-			}
-			return false;
-		});
-	});
+        var scntDiv = $('#ing-coll-fields');
+        var i = $('#ing-coll-fields div').size() + 1;
+        
+        $('#addLnk').click(function() {
+            $('<div class="form-group">'+
+					'<label for="ingredient">Sastojak: <input name="ingredient[]" type="text"/></label>'+
+					'<a href="#" class="remScnt">'+
+						'<i class="fa fa-btn fa-close"></i>Makni sastojak'+
+					'</a></div>').appendTo(scntDiv);
+                i++;
+                return false;
+        });
+        scntDiv.on('click', '.remScnt', function() { 
+                if(i> 2) {
+                        $(this).parents('div .form-group').remove();
+                        i--;
+                }
+                return false;
+        });
+    });
 </script>
 @endsection

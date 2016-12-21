@@ -55,4 +55,7 @@ Route::group(['middleware' => 'web'], function () {
 	
 	Route::get('/recipes/edit/{id}', 'RecipesController@edit');
 	Route::post('/recipes/edit', 'RecipesController@update');
+	
+	
+	Route::delete('/recipes/{id}', 'RecipesController@deleteRecipe');
 });
